@@ -1,0 +1,7 @@
+name: GamersReactQuests
+version: ${project.version}
+main: me.christo.gamersreact.Quests
+api-version: 1.16
+authors: [ Christo ]
+description: Quests Plugin for Gamers React
+website: http://www.devchristo.com/
