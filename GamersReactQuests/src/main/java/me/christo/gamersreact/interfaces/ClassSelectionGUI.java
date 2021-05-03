@@ -1,5 +1,7 @@
 package me.christo.gamersreact.interfaces;
 
+import me.christo.gamersreact.classes.ClassTypes;
+import me.christo.gamersreact.utils.PlayerManager;
 import me.christo.handler.handler.Gui;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -15,6 +17,7 @@ public class ClassSelectionGUI {
 
     public static void openSelectionGUI(Player p) {
 
+        PlayerManager manager = new PlayerManager(p);
         Gui gui = new Gui("Choose your class!", 45);
 
         gui.i(10, Material.VINE, "&a&lAdventurer", "", "&7Perfect for players looking to explore", "&7the world" +
@@ -59,6 +62,9 @@ public class ClassSelectionGUI {
 
         gui.onClick(e -> {
             e.setCancelled(true);
+            if(e.getSlot() == 10) {
+                manager.setClass(ClassTypes.ADVENTURER);
+            }
         });
 
         gui.show(p);

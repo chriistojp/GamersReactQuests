@@ -2,6 +2,7 @@ package me.christo.gamersreact.events;
 
 import me.christo.gamersreact.Quests;
 import me.christo.gamersreact.interfaces.ClassSelectionGUI;
+import me.christo.gamersreact.utils.PlayerManager;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -25,6 +26,7 @@ public class FirstJoinEvent implements Listener {
         if (!file.exists()) {
             file.createNewFile();
         }
+
 
         ClassSelectionGUI.openSelectionGUI(e.getPlayer());
 
